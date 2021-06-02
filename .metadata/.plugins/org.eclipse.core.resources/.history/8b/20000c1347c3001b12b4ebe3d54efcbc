@@ -1,0 +1,21 @@
+
+public class Sample {
+
+	int productid=1001;//class or instance variable
+	
+	void addProduct()
+	{
+		String pname="apple";//local variable
+	}
+	void addCategory()
+	{
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
