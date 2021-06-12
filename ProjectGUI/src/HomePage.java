@@ -7,6 +7,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class HomePage extends JFrame {
 
@@ -45,14 +47,32 @@ public class HomePage extends JFrame {
 		contentPane.add(lblHrMappingSystem);
 		
 		JButton btnUserlogin = new JButton("UserLogin");
+		btnUserlogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) 
+			{
+				new UserLogin().setVisible(true);
+			}
+		});
 		btnUserlogin.setBounds(162, 83, 110, 23);
 		contentPane.add(btnUserlogin);
 		
 		JButton btnAdminlogin = new JButton("AdminLogin");
+		btnAdminlogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0)
+			{
+				new AdminLogin().setVisible(true);
+			}
+		});
 		btnAdminlogin.setBounds(162, 147, 110, 23);
 		contentPane.add(btnAdminlogin);
 		
 		JButton btnRegister = new JButton("Register");
+		btnRegister.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) 
+			{
+				new UserRegister().setVisible(true);
+			}
+		});
 		btnRegister.setBounds(162, 222, 110, 23);
 		contentPane.add(btnRegister);
 	}
